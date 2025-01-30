@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            background-color: #495057;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background-image: url('https://via.placeholder.com/1920x600');
+            background-size: cover;
+            background-position: center;
+            color: #723030;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 40px;
+        }
+
+        .product-card {
+            background-color: #ffffff;
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product-card .info {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .product-card h3 {
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+
+        .product-card p {
+            margin: 0;
+            color: #6c757d;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Our Store</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Shop</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+</nav>
+
+<section class="hero">
+    <h2>Your One-Stop Shop for Everything</h2>
+    <p>Discover amazing products and deals today!</p>
+</section>
+
+<section class="products">
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/71QDJHG1PqL._AC_SL1500_.jpg" alt="Product 1">
+        <div class="info">
+            <h3>Product 1</h3>
+            <p>$19.99</p>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/61jfaUCa3wL._AC_SL1500_.jpg" alt="Product 2">
+        <div class="info">
+            <h3>Product 2</h3>
+            <p>$29.99</p>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/81cWbG3LSFL._AC_SL1500_.jpg" alt="Product 3">
+        <div class="info">
+            <h3>Product 3</h3>
+            <p>$39.99</p>
+        </div>
+    </div>
+    <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/71duf0rTDqL._AC_SL1500_.jpg" alt="Product 4">
+        <div class="info">
+            <h3>Product 4</h3>
+            <p>$49.99</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2025 Store Inc. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
