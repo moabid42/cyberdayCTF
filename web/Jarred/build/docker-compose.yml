@@ -1,0 +1,13 @@
+version: '3'
+services:
+  pickled:
+    build: .
+    ports:
+      - "3002:3002"
+    privileged: false
+    restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 2000M
