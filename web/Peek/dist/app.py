@@ -4,15 +4,6 @@ from os import path,getcwd
 app=Flask(__name__)
 CORS(app)
 
-def check_flag(path):
-    if 'flag.txt' == path:  
-        return "Deny"
-    elif 'flag.txt' in path:
-        return "Allow"
-    else:
-        return "No match"
-
-
 
 FLAG_PATH = path.join(getcwd(), "flag.txt")
 with open(FLAG_PATH, "w") as f:
@@ -27,7 +18,7 @@ def index():
 def read_file():
     if request.method == 'POST':
         file = request.form['filename']
-        if file == 'flag.txt':
+        if file == 'flag.txt' or file == './flag.txt':
             return "Try harder ;)"
         else:
             try:
@@ -42,3 +33,4 @@ def read_file():
 
 if __name__ == '__main__':
     app.run(debug=False, port=3001)
+
