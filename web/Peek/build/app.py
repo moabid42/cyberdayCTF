@@ -7,7 +7,7 @@ CORS(app)
 
 FLAG_PATH = path.join(getcwd(), "flag.txt")
 with open(FLAG_PATH, "w") as f:
-    f.write("42HN{FakeFlag}")
+    f.write("42HN{sn34ky_f1l3_r34d3r}")
 
 
 @app.route('/')
