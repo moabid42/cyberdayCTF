@@ -2,6 +2,7 @@ from Crypto.Util.number import *
 
 p=getPrime(2048)
 q=getPrime(2048)
+assert p!=q
 N=p*q
 
 phi=(p-1) * (q-1)
