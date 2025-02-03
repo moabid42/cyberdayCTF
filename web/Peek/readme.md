@@ -1,7 +1,6 @@
 # Peek
 - **Author**: [S1mple]
 - **Category**: Web
-- **Difficulty**: Easy 
 ## Description
 Can you peek into places you shouldn't?
 
