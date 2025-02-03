@@ -1,0 +1,6 @@
+services:
+  challenge:
+    build: ./build/
+    ports:
+      - "8448:8448"
+    restart: unless-stopped
