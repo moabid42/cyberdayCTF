@@ -1,7 +1,6 @@
 # Jarred
 - **Author**: [S1mple]
 - **Category**: Web
-- **Difficulty**: Hard 
 ## Description
 Can you peek into places you shouldn't?
 
