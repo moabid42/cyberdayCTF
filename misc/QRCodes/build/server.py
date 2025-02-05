@@ -5,7 +5,7 @@ import random
 import string
 
 # All these values and functions are meant to be hidden from you by default!
-from hidden import sample_data_label, num_chars_per_qrcode, generate_random_qrcode, challenge_success_label
+from hidden import sample_data_label, num_chars_per_qrcode, generate_qrcode, challenge_success_label
 
 # Constants:
 num_qrcodes = 10
@@ -16,7 +16,7 @@ def request_sample_data():
 	'''
 	Returns a sample QRCode, which you are supposed to use to demystify the encoding algorithm.
 	'''
-	sample_data_bytes = generate_random_qrcode(sample_data_label)
+	sample_data_bytes = generate_qrcode(sample_data_label)
 	print(f'Try to uncover the encoding scheme. Once you\'ll succeed, it\'ll be obvious to you! Here is your sample qr code: {sample_data_bytes}')
 
 def start_challenge():
@@ -26,7 +26,7 @@ def start_challenge():
 	start_time = time.time()
 	for count in range(num_qrcodes):
 		label = ''.join(random.choices(alpha_numerics, k = num_chars_per_qrcode))
-		img = generate_random_qrcode(label)
+		img = generate_qrcode(label)
 		print(f'QRCode #{count + 1}: {img}')
 		response = input('> ')
 		# check time constraint

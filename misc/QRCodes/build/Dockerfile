@@ -35,3 +35,4 @@ CMD socat -T 30 TCP-LISTEN:8448,nodelay,reuseaddr,fork EXEC:"python /home/ctf/se
 
 # Declare the required port
 EXPOSE 8448/tcp
+    
