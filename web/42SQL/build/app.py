@@ -1,7 +1,17 @@
 from flask import Flask, request, render_template
 from sqlite3 import connect
 import re
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
 app = Flask(__name__)
+
+# Initialize Limiter
+limiter = Limiter(
+    get_remote_address, 
+    app=app,
+    default_limits=["10 per minute"]  # Limit to 5 requests per minute
+)
+
 
 conn = connect("challenge.db")
 cursor = conn.cursor()
@@ -17,7 +27,7 @@ cursor.execute("""
         flag TEXT
     );
 """)
-cursor.execute("INSERT OR IGNORE INTO flag VALUES ('42HN{5ql1t3_t4bb5}');")
+cursor.execute("INSERT OR IGNORE INTO flag VALUES ('42HN{REDACTED}');")
 conn.commit()
 conn.close()
 
@@ -29,6 +39,7 @@ def m():
 
 
 @app.route('/login', methods=["GET", "POST"])
+@limiter.limit("10 per minute")
 def index():
     if request.method == "POST":
         username = request.form["username"]
@@ -54,4 +65,4 @@ def index():
 
 
 if __name__ == '__main__':
-    app.run(port=3000, debug=True)
+    app.run(port=3000, debug=False)
