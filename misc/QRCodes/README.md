@@ -1,6 +1,6 @@
-# QRCodes (programming)
+# QRCodes
 - **Author**: [Matthias]
-- **Category**: Misc / Programming
+- **Category**: Misc
 - **Difficulty**: Medium 
 ## Description
 Can you uncover the mystery of these QRCodes?
