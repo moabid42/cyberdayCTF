@@ -86,6 +86,4 @@ def main():
 
 if __name__ == '__main__':
 	from pwn import remote # pip install pwntools
-	for i in range(200):
-		print('='*60 + str(i) + '='*60)
-		main()
+	main()
