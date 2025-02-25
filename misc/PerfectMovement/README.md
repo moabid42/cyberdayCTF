@@ -1,7 +1,7 @@
 # Perfect Movement
 - **Author**: [Matthias]
 - **Category**: Misc / Programming
-- **Difficulty**: Easy
+- **Difficulty**: Medium
 ## Description
 Can you traverse all these mazes efficiently?
 

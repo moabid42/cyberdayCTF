@@ -1,7 +1,7 @@
 # QRCodes
 - **Author**: [Matthias]
 - **Category**: Misc
-- **Difficulty**: Medium 
+- **Difficulty**: Hard 
 ## Description
 Can you uncover the mystery of these QRCodes?
 
