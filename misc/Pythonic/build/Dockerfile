@@ -10,7 +10,7 @@ RUN adduser --disabled-password --gecos '' lowprivuser
 
 WORKDIR /app
 
-COPY . /app
+COPY . /app/
 
 RUN chmod +x /app/serve.sh /app/chall.py && \
     chown -R lowprivuser:lowprivuser /app && \

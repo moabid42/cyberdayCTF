@@ -11,7 +11,7 @@ RUN groupadd -r ctf && useradd -r -g ctf ctf
 WORKDIR /home/ctf
 
 # Copy relevant files into the docker container:
-COPY server.py hidden.py .
+COPY server.py hidden.py ./
 
 # Give the ctf user permissions to relevant directories
 RUN chmod -R 444 server.py hidden.py

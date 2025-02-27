@@ -10,7 +10,7 @@ RUN addgroup -S ctf && adduser -S -g ctf ctf
 WORKDIR /home/ctf
 
 # Copy relevant files into the docker container:
-COPY server.py solver.py common.py .
+COPY server.py solver.py common.py ./
 
 # Give the ctf user permissions to relevant directories
 RUN chmod -R 444 server.py solver.py common.py
