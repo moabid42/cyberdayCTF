@@ -12,7 +12,7 @@ WORKDIR /app
 
 COPY . /app/
 
-RUN chmod +x /app/serve.sh /app/chall.py && \
+RUN chmod +x /app/chall.py && \
     chown -R lowprivuser:lowprivuser /app && \
     chmod -R u-w /app
 
