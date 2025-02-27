@@ -1,8 +1,0 @@
-include:
-  - path:
-    - ./misc/PerfectMovement/compose.yaml
-    - ./misc/Pythonic/build/docker-compose.yaml
-    - ./misc/QRCodes/compose.yaml
-    - ./web/42SQL/build/docker-compose.yml
-    - ./web/Jarred/build/docker-compose.yml
-    - ./web/Peek/build/docker-compose.yml

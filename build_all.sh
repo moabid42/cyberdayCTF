@@ -1,0 +1,12 @@
+cd ~/challenges/cyberdayCTF/misc/PerfectMovement/
+docker-compose build
+cd ~/challenges/cyberdayCTF/misc/Pythonic/build/docker-compose.yaml
+docker-compose build
+cd ~/challenges/cyberdayCTF/misc/QRCodes/compose.yaml
+docker-compose build
+cd ~/challenges/cyberdayCTF/web/42SQL/build/docker-compose.yml
+docker-compose build
+cd ~/challenges/cyberdayCTF/web/Jarred/build/docker-compose.yml
+docker-compose build
+cd ~/challenges/cyberdayCTF/web/Peek/build/docker-compose.yml
+docker-compose build
