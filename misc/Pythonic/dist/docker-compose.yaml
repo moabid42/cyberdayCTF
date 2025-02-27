@@ -1,7 +1,7 @@
-version: '2.4'
+version: '2.5'
 services:
   python:
     build: .
     ports:
-      - 5555:5555
+      - 3001:5555
     privileged: true
