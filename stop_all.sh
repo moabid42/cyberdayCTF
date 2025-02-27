@@ -1,0 +1,6 @@
+(cd /root/challenges/cyberdayCTF/misc/PerfectMovement/ && docker-compose down)
+(cd /root/challenges/cyberdayCTF/misc/Pythonic/build/ && docker-compose down)
+(cd /root/challenges/cyberdayCTF/misc/QRCodes/ && docker-compose down)
+(cd /root/challenges/cyberdayCTF/web/42SQL/build/ && docker-compose down)
+(cd /root/challenges/cyberdayCTF/web/Jarred/build/ && docker-compose down)
+(cd /root/challenges/cyberdayCTF/web/Peek/build/ && docker-compose down)
