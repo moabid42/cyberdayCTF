@@ -2,7 +2,7 @@ services:
   challenge:
     build: ./build/
     ports:
-      - "8447:8447"
+      - "3000:8447"
     restart: unless-stopped
     environment:
       FLAG: "42HN{M1nD_b3Nd|n6_M0vEm3N7}"

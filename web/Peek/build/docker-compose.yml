@@ -3,7 +3,7 @@ services:
   llfi:
     build: .
     ports:
-      - "3001:3001"
+      - "4002:3001"
     privileged: false
     restart: unless-stopped
     deploy:

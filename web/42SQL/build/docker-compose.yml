@@ -3,7 +3,7 @@ services:
   scl:
     build: .
     ports:
-      - "3004:3004"
+      - "4000:3004"
     privileged: false
     restart: unless-stopped
     deploy:
