@@ -1,4 +1,4 @@
-FROM python:3.12-slim AS app
+FROM python:3.9-slim AS app
 
 FROM pwn.red/jail
 COPY --from=app / /srv
