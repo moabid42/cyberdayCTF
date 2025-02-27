@@ -1,1 +1,0 @@
-docker-compose up ./misc/PerfectMovement/ ./misc/QRCodes/ ./misc/Pythonic/build/ ./web/42SQL/build/ ./web/Jarred/build/ ./web/Peek/build/
