@@ -1,6 +1,6 @@
 version: '2.4'
 services:
-  challenge:
+  qrcodes:
     build: ./build/
     ports:
       - "3002:8448"

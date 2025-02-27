@@ -1,6 +1,6 @@
 version: '2.4'
 services:
-  scl:
+  42sql:
     build: .
     ports:
       - "4000:3004"

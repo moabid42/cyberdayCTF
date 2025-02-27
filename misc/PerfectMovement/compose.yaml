@@ -1,6 +1,6 @@
 version: '2.4'
 services:
-  challenge:
+  perfect_movement:
     build: ./build/
     ports:
       - "3000:8447"

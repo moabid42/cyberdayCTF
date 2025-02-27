@@ -1,6 +1,6 @@
 version: '2.4'
 services:
-  llfi:
+  peek:
     build: .
     ports:
       - "4002:3001"
