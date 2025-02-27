@@ -2,8 +2,8 @@ from common import num_mazes, origin, target, move
 from queue import PriorityQueue
 
 
-host = 'localhost'
-port = 8447
+host = '192.214.171.83' #'localhost'
+port = 3000 #8447
 
 
 def solve(maze, start, end):

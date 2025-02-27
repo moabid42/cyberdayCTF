@@ -9,8 +9,8 @@ import cv2 # pip install opencv-python
 from base64 import b64decode
 
 
-host = 'localhost'
-port = 8448
+host = '192.214.171.83' #'localhost'
+port = 3002 #8448
 
 
 def decode_img(img):
