@@ -8,5 +8,5 @@ cd ~/challenges/cyberdayCTF/web/42SQL/build/
 docker-compose build
 cd ~/challenges/cyberdayCTF/web/Jarred/build/
 docker-compose build
-cd ~/challenges/cyberdayCTF/web/Peek/build/
+cd /root/challenges/cyberdayCTF/web/Peek/build/
 docker-compose build
