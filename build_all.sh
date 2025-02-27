@@ -1,12 +1,12 @@
-cd ~/challenges/cyberdayCTF/misc/PerfectMovement/
+cd /root/challenges/cyberdayCTF/misc/PerfectMovement/
 docker-compose build
-cd ~/challenges/cyberdayCTF/misc/Pythonic/build/
+cd /root/challenges/cyberdayCTF/misc/Pythonic/build/
 docker-compose build
-cd ~/challenges/cyberdayCTF/misc/QRCodes/
+cd /root/challenges/cyberdayCTF/misc/QRCodes/
 docker-compose build
-cd ~/challenges/cyberdayCTF/web/42SQL/build/
+cd /root/challenges/cyberdayCTF/web/42SQL/build/
 docker-compose build
-cd ~/challenges/cyberdayCTF/web/Jarred/build/
+cd /root/challenges/cyberdayCTF/web/Jarred/build/
 docker-compose build
 cd /root/challenges/cyberdayCTF/web/Peek/build/
 docker-compose build
