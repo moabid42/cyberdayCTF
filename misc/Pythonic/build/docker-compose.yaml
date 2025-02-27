@@ -3,5 +3,5 @@ services:
   pythonic:
     build: .
     ports:
-      - 3001:5555
+      - 3001:2323
     privileged: true

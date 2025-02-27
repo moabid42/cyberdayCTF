@@ -18,4 +18,4 @@ RUN chmod +x /app/serve.sh /app/chall.py && \
 
 USER lowprivuser
 
-CMD ["./serve.sh"]
+CMD socat -T 60 TCP-LISTEN:2323,reuseaddr,fork EXEC:"timeout 180 python3 /app/chall.py"
