@@ -1,0 +1,7 @@
+{
+	"SecurityDay": {
+		"chall1": {"img": "tile_3_1_3.jpeg"},
+        "chall2": {"img": "tile_3_1_3.jpeg"},
+        "chall3": {"img": "tile_3_1_3.jpeg", "width": 104, "height": 52}
+	}
+}

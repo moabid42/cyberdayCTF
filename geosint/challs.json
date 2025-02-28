@@ -1,0 +1,21 @@
+{
+	"SecurityDay": {
+		"chall1": {
+			"panoType": 1, 
+			"pano": "dMMUWwGiJ6xxTs_776GnDg", 
+			"lat": 50.1149738, "lng": 8.6929166, 
+			"maxZ": 5, "flag": "42HN{very_34sy_s0lve_t0_st4rt_th3_d4y!}"
+		},
+        	"chall2": {
+			"panoType": 1, 
+			"pano": "JFEAhNVHdlPuEHZuHJFmxw", 
+			"lat": 23.0209501, "lng": 120.2709128, 
+			"maxZ": 5, "flag": "42HN{Ge0SinT_c4n_b3_fun_s0met1m3s}"},
+        	"chall3": {
+			"panoType": 1, 
+			"pano": "01yt0PhVSy2htFfavmhhVw", 
+			"lat": 64.0207508, "lng": -21.3230506, 
+			"maxZ": 5, "flag": "42HN{I've_s0lved_3_geosint_challenges_and_all_i_got_was_this_flag}"
+		}
+	}
+}
