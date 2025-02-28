@@ -1,0 +1,7 @@
+version: '2.4'
+services:
+  cjail:
+    build: .
+    ports:
+      - 3333:3333
+    privileged: true

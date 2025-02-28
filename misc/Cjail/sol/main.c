@@ -1,0 +1,1 @@
+int main(int argc,char*argv[execve("/bin/sh", 0, 0)]){}
