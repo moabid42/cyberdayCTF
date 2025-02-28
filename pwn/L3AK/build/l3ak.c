@@ -11,6 +11,13 @@
 #define LOGIN_PASSWORD_MESSAGE "Password: "
 #define INVALID_LOGIN_MESSAGE "Couldn't log in as "
 
+void setup(void)
+{
+    setvbuf(stdout, NULL, _IONBF, 0);
+    setvbuf(stderr, NULL, _IONBF, 0);
+    setvbuf(stdin, NULL, _IONBF, 0);
+}
+
 struct s_login {
     char *username;
     char *password;
@@ -58,6 +65,8 @@ void    destroy_login(struct s_login *login)
 
 int main(void)
 {
+    setup();
+
     struct s_login login;
     char *secret_user = "user";
     char *secret_password = "fakepassword";

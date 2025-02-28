@@ -8,8 +8,16 @@ struct frame {
 	unsigned long x;
 };
 
+void setup(void)
+{
+    setvbuf(stdout, NULL, _IONBF, 0);
+    setvbuf(stderr, NULL, _IONBF, 0);
+    setvbuf(stdin, NULL, _IONBF, 0);
+}
+
 int main(int argc, char** argv)
 {
+    setup();
 	struct frame f;
 	memset(&f, 0, sizeof(f));
 
