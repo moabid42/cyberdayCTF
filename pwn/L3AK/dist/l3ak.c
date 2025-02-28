@@ -68,8 +68,8 @@ int main(void)
     setup();
 
     struct s_login login;
-    char *secret_user = "42HN{foo_";
-    char *secret_password = "l0g1n_4dm1n}";
+    char *secret_user = "user";
+    char *secret_password = "fakepassword";
 
     if (create_login(&login) == -1)
         return -1;

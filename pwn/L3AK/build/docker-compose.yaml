@@ -1,6 +1,6 @@
 version: '2.4'
 services:
-  pwny_vars:
+  l3ak:
     build: .
     ports:
       - 9999:9999

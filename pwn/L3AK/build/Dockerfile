@@ -7,8 +7,6 @@ RUN mkdir -p /usr/src/pwn
 WORKDIR /usr/src/pwn
 RUN cd /usr/src/pwn/
 
-COPY flag.txt ./
-RUN chmod 444 flag.txt
 RUN adduser pwn
 COPY l3ak.c ./
 RUN gcc -std=c99 -o l3ak l3ak.c -O0 -fno-stack-protector -z execstack -no-pie -g -Wno-deprecated-declarations
