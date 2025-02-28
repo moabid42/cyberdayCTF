@@ -1,8 +1,7 @@
-version: '3'
+version: '2.4'
 services:
-  dist_oorrww:
+  pwny_vars:
     build: .
     ports:
-      - "7666:5000"
+      - 9999:9999
     privileged: true
-    restart: unless-stopped

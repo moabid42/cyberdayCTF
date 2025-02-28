@@ -1,9 +1,19 @@
-FROM ubuntu:22.04 AS base
+FROM ubuntu:20.04
 
-FROM pwn.red/jail
-COPY --from=base / /srv
+RUN apt-get update && apt-get install -y socat gcc python
+RUN rm -rf /var/lib/apt/lists/*
 
-COPY l3ak /srv/app/run
-RUN chmod +x /srv/app/run
+RUN mkdir -p /usr/src/pwn
+WORKDIR /usr/src/pwn
+RUN cd /usr/src/pwn/
 
-ENV JAIL_TIME=180 JAIL_CPU=100 JAIL_MEM=10M
+COPY flag.txt ./
+RUN chmod 444 flag.txt
+RUN adduser pwn
+COPY l3ak.c ./
+RUN gcc -std=c99 -o l3ak l3ak.c -O0 -fno-stack-protector -z execstack -no-pie -g -Wno-deprecated-declarations
+RUN chmod 111 l3ak
+RUN rm l3ak.c
+USER pwn
+
+CMD socat -T60 TCP-LISTEN:9999,fork,reuseaddr EXEC:"./l3ak"
