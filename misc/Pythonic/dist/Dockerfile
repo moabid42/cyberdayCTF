@@ -1,14 +1,21 @@
-FROM python:3.9-slim AS app
+FROM python:3.9-slim
 
-FROM pwn.red/jail
-COPY --from=app / /srv
+RUN apt-get update && \
+    apt-get install -y \
+    socat \
+    musl-dev \
+    && rm -rf /var/lib/apt/lists/*
 
-COPY chall.py /srv/app/run
-COPY words.txt /srv/app/words.txt
-COPY flag.txt /srv/app/flag.txt
+RUN adduser --disabled-password --gecos '' lowprivuser
 
-RUN chmod +x /srv/app/run
+WORKDIR /app
 
-RUN mv /srv/app/flag.txt /srv/app/flag-$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 64 | head -n 1).txt
+COPY . /app/
 
-ENV JAIL_PIDS=40 JAIL_TIME=60 JAIL_MEM=60M 
+RUN chmod +x /app/chall.py && \
+    chown -R lowprivuser:lowprivuser /app && \
+    chmod -R u-w /app
+
+USER lowprivuser
+
+CMD socat -T 60 TCP-LISTEN:2323,reuseaddr,fork EXEC:"timeout 180 python3 /app/chall.py"
