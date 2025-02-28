@@ -9,7 +9,7 @@ RUN cd /usr/src/pwn/
 
 RUN adduser pwn
 COPY l3ak.c ./
-RUN gcc -std=c99 -o l3ak l3ak.c -O0 -fno-stack-protector -z execstack -no-pie -g -Wno-deprecated-declarations
+RUN gcc -o l3ak l3ak.c
 RUN chmod 111 l3ak
 RUN rm l3ak.c
 USER pwn
