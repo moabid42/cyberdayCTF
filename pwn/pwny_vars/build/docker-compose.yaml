@@ -1,7 +1,7 @@
 version: '2.4'
 services:
-  shell:
+  pwny_vars:
     build: .
     ports:
-      - 2000:2000
+      - 2222:2222
     privileged: true
