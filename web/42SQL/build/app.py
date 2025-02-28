@@ -27,7 +27,7 @@ cursor.execute("""
         flag TEXT
     );
 """)
-cursor.execute("INSERT OR IGNORE INTO flag VALUES ('42HN{REDACTED}');")
+cursor.execute("INSERT OR IGNORE INTO flag VALUES ('42HN{5ql1t3_t4bb5}');")
 conn.commit()
 conn.close()
 
