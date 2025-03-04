@@ -1,21 +1,6 @@
-FROM python:3.9-slim
+FROM python:3-slim
+RUN apt-get update -y && apt-get dist-upgrade -y && apt-get install socat gcc -y
+COPY ./flag.txt /app/flag.txt
+COPY ./chall.py /app/chall.py
 
-RUN apt-get update && \
-    apt-get install -y \
-    socat \
-    musl-dev \
-    && rm -rf /var/lib/apt/lists/*
-
-RUN adduser --disabled-password --gecos '' lowprivuser
-
-WORKDIR /app
-
-COPY . /app/
-
-RUN chmod +x /app/chall.py && \
-    chown -R lowprivuser:lowprivuser /app && \
-    chmod -R u-w /app
-
-USER lowprivuser
-
-CMD socat -T 60 TCP-LISTEN:2323,reuseaddr,fork EXEC:"timeout 180 python3 /app/chall.py"
+CMD ["socat", "TCP-LISTEN:3333,reuseaddr,fork", "EXEC:\"python /app/chall.py\",stderr"]
